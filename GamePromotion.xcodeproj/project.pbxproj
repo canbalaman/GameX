@@ -15,6 +15,8 @@
 		61DAE5C628FD821300EDDFEF /* DownloaderClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61DAE5C528FD821300EDDFEF /* DownloaderClient.swift */; };
 		61DAE5C828FEAF6C00EDDFEF /* APIData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61DAE5C728FEAF6C00EDDFEF /* APIData.swift */; };
 		61DAE5CA28FEB23C00EDDFEF /* GameVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61DAE5C928FEB23C00EDDFEF /* GameVM.swift */; };
+		61DAE5D02906DD5E00EDDFEF /* ImageDownloaderClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61DAE5CF2906DD5E00EDDFEF /* ImageDownloaderClient.swift */; };
+		61DAE5D42906DF3F00EDDFEF /* PublicImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61DAE5D32906DF3F00EDDFEF /* PublicImage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +29,8 @@
 		61DAE5C528FD821300EDDFEF /* DownloaderClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloaderClient.swift; sourceTree = "<group>"; };
 		61DAE5C728FEAF6C00EDDFEF /* APIData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIData.swift; sourceTree = "<group>"; };
 		61DAE5C928FEB23C00EDDFEF /* GameVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameVM.swift; sourceTree = "<group>"; };
+		61DAE5CF2906DD5E00EDDFEF /* ImageDownloaderClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloaderClient.swift; sourceTree = "<group>"; };
+		61DAE5D32906DF3F00EDDFEF /* PublicImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublicImage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +102,7 @@
 			isa = PBXGroup;
 			children = (
 				61757F8328F863BC008AFB5B /* GameListView.swift */,
+				61DAE5D32906DF3F00EDDFEF /* PublicImage.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -115,6 +120,7 @@
 			children = (
 				61DAE5C528FD821300EDDFEF /* DownloaderClient.swift */,
 				61DAE5C728FEAF6C00EDDFEF /* APIData.swift */,
+				61DAE5CF2906DD5E00EDDFEF /* ImageDownloaderClient.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -192,8 +198,10 @@
 				61757F8428F863BC008AFB5B /* GameListView.swift in Sources */,
 				61757F9428F86569008AFB5B /* Game.swift in Sources */,
 				61757F8228F863BC008AFB5B /* GamePromotionApp.swift in Sources */,
+				61DAE5D02906DD5E00EDDFEF /* ImageDownloaderClient.swift in Sources */,
 				61DAE5C828FEAF6C00EDDFEF /* APIData.swift in Sources */,
 				61DAE5CA28FEB23C00EDDFEF /* GameVM.swift in Sources */,
+				61DAE5D42906DF3F00EDDFEF /* PublicImage.swift in Sources */,
 				61DAE5C628FD821300EDDFEF /* DownloaderClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

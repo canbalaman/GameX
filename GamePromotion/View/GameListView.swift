@@ -9,14 +9,31 @@ import SwiftUI
 
 struct GameListView: View {
    @ObservedObject var gameListViewModel :GameListVM
+    @State var SearchGame=""
     
     init (){
         self.gameListViewModel = GameListVM()
-        self.gameListViewModel.GameSearch(gameName: "forest")
+        
     }
     var body: some View {
+        NavigationView{
+            VStack{
+            TextField("Aranacak Kelime", text:$SearchGame) {
+                self.gameListViewModel.GameSearch(gameName: SearchGame)
+            }.padding()
         List(gameListViewModel.games, id: \.Id){
-            game in  Text(game.name)
+            game in
+            HStack{
+                Image("placeholder2").resizable().frame(width: 90, height: 130)
+                   
+                VStack{
+                    Text(game.name).foregroundColor(.blue)
+                    
+                }
+            }
+        
+        }.navigationTitle(Text("Oyunlar"))
+    }
         }
     }
 }

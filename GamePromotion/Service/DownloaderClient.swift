@@ -8,7 +8,7 @@ class DownloaderClient{
         
         
        
-       guard let url = URL(string: "https://api.rawg.io/api/games?key=a37bfe22bdfe43358212b79221115d33")
+       guard let url = URL(string: "https://api.rawg.io/api/games?key=a37bfe22bdfe43358212b79221115d33&search=\(search)")
         else {
             return
         }

@@ -25,9 +25,9 @@ struct GameViewModel{
     var name : String {
         game.name
     }
-//    var poster :String{
-  //      game.backgroundImage
-  //  }
+    //var poster : String {
+     //  game.backgroundImage
+    //}
     var Id: Int{
         game.id
     }
