@@ -1,10 +1,4 @@
-//
-//  APIData.swift
-//  GamePromotion
-//
-//  Created by Can Balaman on 18.10.2022.
-//
-
+// Api Bilgilerini burda tutacağım
 import Foundation
 
 class API{
