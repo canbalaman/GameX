@@ -13,6 +13,9 @@
 		61757F8928F863BD008AFB5B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 61757F8828F863BD008AFB5B /* Preview Assets.xcassets */; };
 		61757F9428F86569008AFB5B /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61757F9328F86569008AFB5B /* Game.swift */; };
 		61A5C1D8291A840600FE0F4E /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 61A5C1D7291A840600FE0F4E /* Kingfisher */; };
+		61A5C1DD291A9BC700FE0F4E /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61A5C1DC291A9BC700FE0F4E /* WelcomeView.swift */; };
+		61A5C1E0291A9F6100FE0F4E /* x.png in Resources */ = {isa = PBXBuildFile; fileRef = 61A5C1DF291A9F6100FE0F4E /* x.png */; };
+		61A5C1E2291AA00E00FE0F4E /* xLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 61A5C1E1291AA00E00FE0F4E /* xLogo.png */; };
 		61DAE5C628FD821300EDDFEF /* DownloaderClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61DAE5C528FD821300EDDFEF /* DownloaderClient.swift */; };
 		61DAE5C828FEAF6C00EDDFEF /* APIData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61DAE5C728FEAF6C00EDDFEF /* APIData.swift */; };
 		61DAE5CA28FEB23C00EDDFEF /* GameVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61DAE5C928FEB23C00EDDFEF /* GameVM.swift */; };
@@ -30,6 +33,9 @@
 		61757F8528F863BD008AFB5B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		61757F8828F863BD008AFB5B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		61757F9328F86569008AFB5B /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		61A5C1DC291A9BC700FE0F4E /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
+		61A5C1DF291A9F6100FE0F4E /* x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = x.png; sourceTree = "<group>"; };
+		61A5C1E1291AA00E00FE0F4E /* xLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = xLogo.png; sourceTree = "<group>"; };
 		61DAE5C528FD821300EDDFEF /* DownloaderClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloaderClient.swift; sourceTree = "<group>"; };
 		61DAE5C728FEAF6C00EDDFEF /* APIData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIData.swift; sourceTree = "<group>"; };
 		61DAE5C928FEB23C00EDDFEF /* GameVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameVM.swift; sourceTree = "<group>"; };
@@ -71,12 +77,13 @@
 		61757F8028F863BC008AFB5B /* GamePromotion */ = {
 			isa = PBXGroup;
 			children = (
+				61A5C1DE291A9C0400FE0F4E /* Resources */,
+				61A5C1D9291A9B6F00FE0F4E /* Feature */,
 				61DAE5C428FD81D500EDDFEF /* Service */,
 				61757F9228F86528008AFB5B /* App */,
 				61757F9128F86522008AFB5B /* View */,
 				61757F9028F86518008AFB5B /* ViewModel */,
 				61757F8F28F864DD008AFB5B /* Model */,
-				61757F8528F863BD008AFB5B /* Assets.xcassets */,
 				61757F8728F863BD008AFB5B /* Preview Content */,
 			);
 			path = GamePromotion;
@@ -124,6 +131,40 @@
 				61757F8128F863BC008AFB5B /* GamePromotionApp.swift */,
 			);
 			path = App;
+			sourceTree = "<group>";
+		};
+		61A5C1D9291A9B6F00FE0F4E /* Feature */ = {
+			isa = PBXGroup;
+			children = (
+				61A5C1DB291A9B8D00FE0F4E /* Authentication */,
+			);
+			path = Feature;
+			sourceTree = "<group>";
+		};
+		61A5C1DA291A9B7D00FE0F4E /* Welcome */ = {
+			isa = PBXGroup;
+			children = (
+				61A5C1DC291A9BC700FE0F4E /* WelcomeView.swift */,
+			);
+			path = Welcome;
+			sourceTree = "<group>";
+		};
+		61A5C1DB291A9B8D00FE0F4E /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				61A5C1DA291A9B7D00FE0F4E /* Welcome */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
+		61A5C1DE291A9C0400FE0F4E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				61A5C1E1291AA00E00FE0F4E /* xLogo.png */,
+				61A5C1DF291A9F6100FE0F4E /* x.png */,
+				61757F8528F863BD008AFB5B /* Assets.xcassets */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		61DAE5C428FD81D500EDDFEF /* Service */ = {
@@ -200,6 +241,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				61A5C1E0291A9F6100FE0F4E /* x.png in Resources */,
+				61A5C1E2291AA00E00FE0F4E /* xLogo.png in Resources */,
 				61757F8928F863BD008AFB5B /* Preview Assets.xcassets in Resources */,
 				61757F8628F863BD008AFB5B /* Assets.xcassets in Resources */,
 			);
@@ -219,6 +262,7 @@
 				61DAE5D6290D8E2600EDDFEF /* GameDetails.swift in Sources */,
 				61DAE5D02906DD5E00EDDFEF /* ImageDownloaderClient.swift in Sources */,
 				61DAE5DA290DC59400EDDFEF /* DetailsView.swift in Sources */,
+				61A5C1DD291A9BC700FE0F4E /* WelcomeView.swift in Sources */,
 				61DAE5C828FEAF6C00EDDFEF /* APIData.swift in Sources */,
 				61DAE5CA28FEB23C00EDDFEF /* GameVM.swift in Sources */,
 				61DAE5D42906DF3F00EDDFEF /* PublicImage.swift in Sources */,
@@ -359,6 +403,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -366,9 +411,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = canbalaman.GamePromotion;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -388,6 +436,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -395,9 +444,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = canbalaman.GamePromotion;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
