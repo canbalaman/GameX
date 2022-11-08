@@ -1,4 +1,5 @@
 import SwiftUI
+import Kingfisher
 
 struct DetailsView: View {
     
@@ -8,7 +9,9 @@ struct DetailsView: View {
     var body: some View {
         VStack{
         //    PublicImage(url: gameDetayViewModel.GameDetayi?.poster ?? "Image Gelecek")
-            Image("placeholder2").resizable().frame(width: 250, height: 300, alignment: .top).padding()
+            KFImage(URL(string: gameDetayViewModel.GameDetayi?.poster ?? "Image"))
+                .resizable()
+                .frame(width: 300,height: 450,alignment: .top).padding()
             Text(gameDetayViewModel.GameDetayi?.title ?? "İsmi gelecek").font(.title2).padding()
             Text(gameDetayViewModel.GameDetayi?.description ?? "Detay gelecek").padding()
             Text(" Çıkış Yılı  \(gameDetayViewModel.GameDetayi?.year ?? "Yıl Gelecek")").padding()
