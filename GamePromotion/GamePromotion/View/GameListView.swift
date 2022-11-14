@@ -1,5 +1,6 @@
 import SwiftUI
 import Kingfisher
+import Firebase
 
 struct GameListView: View {
     // observedobject bir değişkeni depolamak ve diğer viewlar arasında değişimleri otamatık taşır
