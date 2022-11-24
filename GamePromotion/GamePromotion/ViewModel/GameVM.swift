@@ -31,7 +31,7 @@ struct GameViewModel{
         game.name
     }
     var poster : String {
-       game.backgroundImage ?? "placeholder2"
+        game.backgroundImage ?? "placeholder2"
       
         }
     

@@ -13,6 +13,7 @@ struct DetailsView: View {
                 .resizable()
                 .frame(width: 300,height: 450,alignment: .top).padding()
             Text(gameDetayViewModel.GameDetayi?.title ?? "İsmi gelecek").font(.title2).padding()
+        
             Text(gameDetayViewModel.GameDetayi?.description ?? "Detay gelecek").padding()
             Text(" Çıkış Yılı  \(gameDetayViewModel.GameDetayi?.year ?? "Yıl Gelecek")").padding()
             Text("Web Site \(gameDetayViewModel.GameDetayi?.website ?? "WebSite gelecek")")

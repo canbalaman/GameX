@@ -6,22 +6,36 @@ struct WelcomeView: View {
         VStack{
             
             Image("ımg_x").resizable().frame(width: 300 ,height: 300,alignment: .top)
-            Button {
-                
-                
-            } label: {
-                HStack{
-                    Image("star.fill").resizable().frame(width: 48,height: 48)
-                    Text("Sign in Mail").foregroundColor(.white)
-                    Spacer()
+            Text("Welcome")
+                .font(.largeTitle)
+                .fontWeight(.bold)
+                .foregroundColor(.purple)
+            
+            NavigationView{
+                Button {
+                   
+                } label: {
+                    HStack{
+                        Image(systemName:"envelope.badge.fill").resizable().frame(width: 32,height: 32).foregroundColor(.white)
+                       
+                        Text("Sign in Mail")
+                            .font(.title2)
+                            
+                            .foregroundColor(.white)
+                        Spacer()
+                        
+                    }
+                    .padding()
+                    .background(.purple)
                     
-                }
-                .background(.orange)
-            }.buttonStyle(.borderless)
-        }
+                }.buttonStyle(.borderless)
+                    
                 
-
+                
+                
+            }
         }
+    }
     }
 
 
@@ -30,4 +44,3 @@ struct WelcomeView_Previews: PreviewProvider {
         WelcomeView()
     }
 }
-

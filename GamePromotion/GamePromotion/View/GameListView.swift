@@ -54,9 +54,8 @@ struct GameListView: View {
             } label: {
                 //Yatay
                 HStack() {
-                 //   PublicImage(url: game.poster)
-               // Image("placeholder2").resizable().frame(width:90,height: 120)
-                    KFImage(URL(string: game.poster)!)
+                
+                    KFImage(URL(string:game.poster)!)
                         .resizable().frame(width:90,height: 120)
                     VStack{
                         Text(game.name).foregroundColor(.blue)

@@ -4,13 +4,16 @@ import Firebase
 struct LoginView: View {
     @State private var email = ""
     @State private var password = ""
+    
     var body: some View {
+       
+        
         VStack{
             
-            Image("ımg_x").resizable().frame(width: 300 ,height: 300,alignment: .top)
-            Text("Welcome")
+            Image("ımg_x").resizable().frame(width: 300 ,height: 300,alignment: .top).foregroundColor(.white)
+            
             VStack {
-                TextField("Write Your email",text: $email).keyboardType(.emailAddress).padding()
+                TextField("Write Your email",text: $email).keyboardType(.emailAddress).padding().foregroundColor(.white)
             }
             
             VStack {
@@ -21,15 +24,28 @@ struct LoginView: View {
                 Button {
                     register()
                 } label: {
-                    Text("Sign Up")
-                }
-                Button {
+                    HStack{
+                        //Image(systemName: "")
+                        Text("Sign Up").foregroundColor(.white)
+                    }
                     
-                } label: {
-                    Text("Log In")
                 }
+                
+                
+                // Login Button
+                Button {
+                    login()
+                } label: {
+                    HStack{
+                      //  Image(systemName: "")
+                        Text("Log In").foregroundColor(.white)
+                    }
+                   
+                }
+                
 
-            }
+            }.buttonStyle(.borderless).background(.purple)
+            
         }
        
     }
@@ -51,7 +67,7 @@ struct LoginView: View {
                 
             }
             else {
-                print("Giriş Başarılı")
+               
             }
         }
     }
