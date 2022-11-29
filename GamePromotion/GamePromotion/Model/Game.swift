@@ -3,6 +3,7 @@ import Foundation
 
 struct Games: Codable{
     let results : [Game]
+    let page: Int?
 }
 // Decoable json dilinde gelen veriyi swift diline çevirmek için
 // Encodable  swift deki verileri json çevirir
@@ -13,6 +14,7 @@ struct Game : Codable{
     let id : Int
     let name : String
     let backgroundImage: String?
+    
     }
 
 
