@@ -12,11 +12,11 @@ struct DetailsView: View {
             KFImage(URL(string: gameDetayViewModel.GameDetayi?.poster ?? "Image"))
                 .resizable()
                 .frame(width: 300,height: 450,alignment: .top).padding()
-            Text(gameDetayViewModel.GameDetayi?.title ?? "İsmi gelecek").font(.title2).padding()
+            Text(gameDetayViewModel.GameDetayi?.title ?? "").font(.title2).padding()
         
             Text(gameDetayViewModel.GameDetayi?.description ?? "Detay gelecek").padding()
-            Text(" Çıkış Yılı  \(gameDetayViewModel.GameDetayi?.year ?? "Yıl Gelecek")").padding()
-            Text("Web Site \(gameDetayViewModel.GameDetayi?.website ?? "WebSite gelecek")")
+            Text(" Release Year  \(gameDetayViewModel.GameDetayi?.year ?? "Yıl Gelecek")").padding()
+            Text("Web Page \(gameDetayViewModel.GameDetayi?.website ?? "WebSite gelecek")")
         }.onAppear(perform : {
             self.gameDetayViewModel.GameDetailsGo(id:id)
         })

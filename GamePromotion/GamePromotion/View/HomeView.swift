@@ -1,9 +1,3 @@
-//
-//  HomeView.swift
-//  GamePromotion
-//
-//  Created by Can Balaman on 25.11.2022.
-//
 
 import SwiftUI
 
@@ -13,20 +7,14 @@ struct HomeView: View {
         
         TabView{
             
-           // GameListView()
-            Text("Profile")
+            ProfileView()
                 .tabItem{
                     Image(systemName: "person.fill")
                     Text("Profile")
                 }
-            //Game
            
-            SettingView()
-                .tabItem{
-                    Image(systemName: "gear.circle.fill")
-                    Text("Settings")
-                }
-            
+          
+        
             //Game
             GameListView()
                 .tabItem{
@@ -37,7 +25,7 @@ struct HomeView: View {
             Text("Favori")
                 .tabItem{
                     Image(systemName: "star.fill")
-                    Text("Favori")
+                    Text("Favorite")
                 }
         }
         

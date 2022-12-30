@@ -1,0 +1,29 @@
+/* 
+  Localizable.strings
+  GamePromotion
+
+  Created by Can Balaman on 20.12.2022.
+  
+*/
+"Write your Email" = "Email Adresini Gir";
+"Write your Password" = "Şifre Gir";
+"Log In" = "Giriş Yap";
+"Sign Up" = "Kayıt Ol";
+"Welcome" = "Hoş Geldin";
+"Sign in Mail" = "Mail İle Giriş Yap";
+"Search" = "Arama";
+"Game" = "Oyun";
+"Release Year" = "Çıkış Tarihi";
+"Web Page" = "Web Sayfası";
+"Profile" = "Profil";
+"Games" = "Oyunlar";
+"Favorite" = "Favori";
+"Turkish"="Türkçe";
+"English"="İngilizce";
+"Display" ="Ekran";
+"Dark mode settings"="Karanlık mod ayarları";
+"Dark Mode" = "Karanlık Mod";
+"Language"= "Dil";
+"Language settings"="Dil ayarları";
+"Select Language"= "Dil Seçiniz";
+"Settings" = "Ayarlar";

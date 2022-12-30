@@ -1,0 +1,29 @@
+/* 
+  Localizable.strings
+  GamePromotion
+
+  Created by Can Balaman on 20.12.2022.
+  
+*/
+"Write your email" = "Write your email";
+"Write your Password" = "Write your email";
+"Log in" = "Log in";
+"Sign Up" = "Sign Up";
+"Welcome" = "Welcome";
+"Sign in Mail" = "Sign in Mail";
+"Search" = "Search";
+"Game" = "Game";
+"Release Year" = "Release Year";
+"Web Page" = "Web Page";
+"Profile" = "Profile";
+"Games" = "Games";
+"Favorite" = "Favorite";
+"Turkish"="Turkish";
+"English"="English";
+"Display" ="Display";
+"Dark mode settings"="Dark mode settings";
+"Dark Mode" = "Dark Mode";
+"Language"= "Language";
+"Language settings"="Language settings";
+"Select Language"= "Select Language";
+"Settings" = "Settings";

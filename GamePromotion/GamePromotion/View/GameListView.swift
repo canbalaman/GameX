@@ -4,7 +4,7 @@ import Firebase
 
 struct GameListView: View {
     // observedobject bir değişkeni depolamak ve diğer viewlar arasında değişimleri otamatık taşır
-   @ObservedObject var gameListViewModel :GameListVM
+    @ObservedObject var gameListViewModel :GameListVM
     //State sadecebu bu viewde çalışır
     @State var SearchGame=""
     
@@ -18,57 +18,57 @@ struct GameListView: View {
             VStack{
                 HStack{
                     //Search Bar
-                    TextField("Aranacak Kelime", text:$SearchGame)
+                    TextField("Search", text:$SearchGame)
                     {
-                        self.gameListViewModel.GameSearch(gameName: SearchGame)
+                        self.gameListViewModel.GameSearch(gameName: SearchGame.trimmingCharacters(in: .whitespacesAndNewlines).addingPercentEncoding(withAllowedCharacters:.urlHostAllowed) ?? SearchGame)
                     }.padding(.leading,24)
                     
                         .padding()
-                    .background(Color(.systemGray5))
-                    .cornerRadius(8)
-                    .padding(.horizontal)
-                    .overlay(
-                        HStack{
-                            Image(systemName: "magnifyingglass")
-                            Spacer()
-                            Button {
-                                SearchGame=""
-                            } label: {
-                                Image(systemName: "xmark.circle.fill" )
-                                    .padding(.vertical)
+                        .background(Color(.systemGray5))
+                        .cornerRadius(112)
+                        .padding(.horizontal)
+                        .overlay(
+                            HStack{
+                                Image(systemName: "magnifyingglass")
+                                Spacer()
+                                Button {
+                                    SearchGame=""
+                                } label: {
+                                    Image(systemName: "xmark.circle.fill" )
+                                        .padding(.vertical)
+                                }
+                                
+                            }
+                                .padding(.horizontal,32)
+                                .foregroundColor(.blue)
+                        )
+                    Spacer()
+                }
+                
+                
+                List(gameListViewModel.games, id: \.Id){
+                    game in
+                    //Listedeki tıkladığımız alanın id sini Details view gönderiyor
+                    NavigationLink {
+                        DetailsView(id: game.Id)
+                    } label: {
+                        //Yatay
+                        HStack() {
+                            
+                            KFImage(URL(string:game.poster)!)
+                                .resizable().frame(width:90,height: 120)
+                            VStack{
+                                Text(game.name).foregroundColor(.blue)
+                                
                             }
                             
                         }
-                            .padding(.horizontal,32)
-                            .foregroundColor(.blue)
-                    )
-                    Spacer()
-                }
-            
-                    
-        List(gameListViewModel.games, id: \.Id){
-            game in
-             //Listedeki tıkladığımız alanın id sini Details view gönderiyor
-            NavigationLink {
-                DetailsView(id: game.Id)
-            } label: {
-                //Yatay
-                HStack() {
-                
-                    KFImage(URL(string:game.poster)!)
-                        .resizable().frame(width:90,height: 120)
-                    VStack{
-                        Text(game.name).foregroundColor(.blue)
-                        
                     }
                     
-                }
+                    
+                }.navigationTitle(Text("Game"))
+                    .navigationBarTitleDisplayMode(.large)
             }
-
-           
-        }.navigationTitle(Text("Oyunlar"))
-                    .navigationBarTitleDisplayMode(.inline)
-    }
         }
     }
 }

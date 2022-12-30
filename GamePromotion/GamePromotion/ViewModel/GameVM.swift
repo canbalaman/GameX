@@ -2,6 +2,7 @@ import Foundation
 import SwiftUI
 
 class GameListVM : ObservableObject{
+
     // ObservableObject değişekenler üzerinde olan her değişikliği nesneler üzerine yeniden yükler
     @Published var games=[GameViewModel]()
     // Published Yeniden yüklemesini ve tetiklemesini söyleyen
@@ -16,6 +17,7 @@ class GameListVM : ObservableObject{
                 DispatchQueue.main.async {
                     //main üzerindeki thread asenkron olarak çalışır
                     self.games=gameArray.map(GameViewModel.init)
+                   
                     // veriler dizi şeklinde olduğu için mapladık
                 }
                 
@@ -25,18 +27,19 @@ class GameListVM : ObservableObject{
     }
 // Gösterilecek model
 struct GameViewModel{
+  
     let game : Game
     
     var name : String {
         game.name
     }
     var poster : String {
-        game.backgroundImage ?? "placeholder2"
-      
+        game.poster
         }
     
     var Id: Int{
         game.id
     }
+    
     
 }

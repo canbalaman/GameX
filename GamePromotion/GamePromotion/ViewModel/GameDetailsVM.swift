@@ -2,6 +2,7 @@ import Foundation
 import SwiftUI
 
 class GameDetailsViewModel : ObservableObject {
+    
     // ObservableObject değişekenler üzerinde olan her değişikliği nesneler üzerine yeniden yükler
     @Published var GameDetayi : GameDetailsModelViewModels?
     // Published Yeniden yüklemesini ve tetiklemesini söyleyen
