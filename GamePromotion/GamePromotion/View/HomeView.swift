@@ -8,14 +8,6 @@ struct HomeView: View {
     var body: some View {
         
         TabView{
-            
-            SettingView(DarkModeEnabled: $darkModeEnabled, systemThemeEnabled: $systemThemeEnabled)
-                .tabItem{
-                    Image(systemName: "person.fill")
-                    Text("Profile")
-                }
-           
-          
         
             //Game
             GameListView()
@@ -23,6 +15,13 @@ struct HomeView: View {
                     Image(systemName: "gamecontroller.fill")
                     Text("Games")
                 }
+            SettingView(DarkModeEnabled: $darkModeEnabled, systemThemeEnabled: $systemThemeEnabled)
+                .tabItem{
+                    Image(systemName: "person.fill")
+                    Text("Profile")
+                }
+
+            
             
         }.onAppear{
             SystemThemeManager.shared.handleTheme(darkMode: darkModeEnabled, system: systemThemeEnabled)

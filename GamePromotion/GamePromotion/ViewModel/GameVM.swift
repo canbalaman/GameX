@@ -1,6 +1,7 @@
 import Foundation
 import SwiftUI
 
+
 class GameListVM : ObservableObject{
 
     // ObservableObject değişekenler üzerinde olan her değişikliği nesneler üzerine yeniden yükler
@@ -14,12 +15,12 @@ class GameListVM : ObservableObject{
             case.failure(let hata):
                 print(hata)
             case.success(let gameArray):
-                DispatchQueue.main.async {
-                    //main üzerindeki thread asenkron olarak çalışır
+                
+                    
                     self.games=gameArray.map(GameViewModel.init)
                    
                     // veriler dizi şeklinde olduğu için mapladık
-                }
+                
                 
                 }
             }

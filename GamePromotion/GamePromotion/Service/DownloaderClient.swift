@@ -6,11 +6,13 @@ import SwiftUI
 
 class DownloaderClient{
     //  @escaping elemanı genellikle uygulamanın arka tarafında internet üzerinden veri çekmek için kullanılır eğer escaping kullanmasaydık bazı verilerin  geç gelmesi durumunda verilerimiz göstermesini beklerdi verilerimiz geç gelirdi
-    func GameDownloader(search : String ,completion: @escaping (Result<[Game],Error>)->()){
-        
-        
+    let limit : Int = 20
+  
+    func GameDownloader(search : String ,page : Int = 1,completion: @escaping (Result<[Game],Error>)->()){
+    
+         let API_KEY = "a37bfe22bdfe43358212b79221115d33"
        
-       guard let url = URL(string: "https://api.rawg.io/api/games?key=a37bfe22bdfe43358212b79221115d33&search=\(search)")
+       guard let url = URL(string: "https://api.rawg.io/api/games?key=\(API_KEY)&search=\(search)&page=\(String(page))&page_size=\(limit)")
         else {
             return
         }
@@ -28,8 +30,7 @@ class DownloaderClient{
                 // veriyi decode ediyoruz
                 //Games.self Modeldeki verileri
                 let gameCevap = try JSONDecoder().decode(Games.self, from: data)
-               // print(gameCevap)
-                // ----------olumlu olursa bura çalışacak -----------
+               
                 completion(.success((gameCevap.results)))
               //  print(gameCevap.results)
                
