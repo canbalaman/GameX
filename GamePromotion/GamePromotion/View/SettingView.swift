@@ -1,9 +1,14 @@
 import SwiftUI
+import Firebase
+
+
 
 struct SettingView: View {
-    @State private var pickerNumber = 0
+    @Environment(\.dismiss) private var dismiss
+    @Binding var DarkModeEnabled: Bool
+    @Binding var systemThemeEnabled: Bool
     
-    @State var DarkModeİsActive: Bool = false
+    
     var optionPicker = ["Türkçe","English"]
     var body: some View {
         NavigationView{
@@ -11,29 +16,39 @@ struct SettingView: View {
                 Section(header : Text("Display"),
                         footer:Text("Dark mode settings"))
                 {
-                    Toggle(isOn: $DarkModeİsActive){
+                    Toggle(isOn: $DarkModeEnabled,
+                           label: {
                         Text("Dark Mode")
-                    }
+                        
+                    })
+                    .onChange(of: DarkModeEnabled,perform: { _ in
+                        SystemThemeManager.shared.handleTheme(darkMode: DarkModeEnabled, system: systemThemeEnabled)
+                    })
+                    
+                    Toggle(isOn: $systemThemeEnabled,
+                           label: {
+                        Text("System Theme")
+                        
+                    })
+                    .onChange(of: systemThemeEnabled,perform:{ _ in
+                        SystemThemeManager.shared.handleTheme(darkMode: DarkModeEnabled, system: systemThemeEnabled)
+                    })
                 }
                 
-                Section(header : Text("Language"),
-                        footer:Text("Language settings"))
-                {
-                    
-                    
-                    Picker(selection:$pickerNumber,label:
-                            Text("Select Language")){
-                        ForEach(0..<optionPicker.count){
-                            
-                            Text(self.optionPicker[$0])
-                        }
-                    }
-                    
-                }
                 Section(header : Text("Account"),
                         footer:Text("Account settings"))
                 {
                     Button {
+                        do{
+                            try Auth.auth().signOut()
+                            print("log out ok")
+                            dismiss()
+                        }
+                            catch{
+                                print("sign out error")
+                        }
+                            
+                     
                         
                     } label: {
                         Text("Sign Out")
@@ -57,6 +72,6 @@ struct SettingView: View {
 
 struct SettingView_Previews: PreviewProvider {
     static var previews: some View {
-        SettingView()
+        SettingView(DarkModeEnabled: .constant(false), systemThemeEnabled: .constant(false))
     }
 }

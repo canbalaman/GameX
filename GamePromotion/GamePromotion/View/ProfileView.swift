@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Firebase
 
 struct ProfileView: View {
     var body: some View {
@@ -23,7 +24,7 @@ struct ProfileView: View {
                 }
                 
             }
-            SettingView()
+           
                 
             
         }

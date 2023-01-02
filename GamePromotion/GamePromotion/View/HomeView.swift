@@ -2,12 +2,14 @@
 import SwiftUI
 
 struct HomeView: View {
-   
+    @AppStorage("darkModeEnabled") private var darkModeEnabled = false
+    @AppStorage("systemThemeEnabled") private var systemThemeEnabled = false
+    
     var body: some View {
         
         TabView{
             
-            ProfileView()
+            SettingView(DarkModeEnabled: $darkModeEnabled, systemThemeEnabled: $systemThemeEnabled)
                 .tabItem{
                     Image(systemName: "person.fill")
                     Text("Profile")
@@ -21,12 +23,9 @@ struct HomeView: View {
                     Image(systemName: "gamecontroller.fill")
                     Text("Games")
                 }
-            //Favori
-            Text("Favori")
-                .tabItem{
-                    Image(systemName: "star.fill")
-                    Text("Favorite")
-                }
+            
+        }.onAppear{
+            SystemThemeManager.shared.handleTheme(darkMode: darkModeEnabled, system: systemThemeEnabled)
         }
         
     }
