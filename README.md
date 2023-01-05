@@ -27,4 +27,4 @@
 
 Preview | -Image
 :-------------------------:
-img src="https://user-images.githubusercontent.com/65334876/210850926-5903db9a-02fd-4717-bf92-9d78a43652f4.png" width="100" height="100">
+<img src="https://user-images.githubusercontent.com/65334876/210850926-5903db9a-02fd-4717-bf92-9d78a43652f4.png" width="100" height="100">
